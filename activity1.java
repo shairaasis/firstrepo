@@ -1,39 +1,31 @@
 import java.util.Scanner;  
-public class activity1  
-{  
-public static void main(String[] args)   
-{  
- 
-Scanner sc=new Scanner(System.in);  
- 
+public class activity1  {  
+    public static void main(String[] args){  
 
+        Scanner sc=new Scanner(System.in);  
+        
+        //creates person array in the memory of length 5
+        String[] persons = new String[5];  
 
-//creates an array in the memory of length 5
-String[] persons = new String[5];  
-for(int i=0; i<persons.length; i++)  
-{  
-    System.out.println("Enter the name: ");  
-    //reading array elements from the user   
-    persons[i]=sc.nextLine();
+        System.out.println("Please enter upto five names.");
+        System.out.println("-----------------------------");
 
-      
-} 
+        //for loop to ask user to input upto 5 names
+        for(int index=0; index<persons.length; index++)  
+        {  
+            //reading array elements from the user
+            System.out.println("Enter the name: ");     
+            persons[index]=sc.nextLine();
+        } 
 
-for (int i=0; i < persons.length; i+=1){
-    System.out.println(persons[i]);
+        System.out.println("The names you entered are as follows.");
+        System.out.println("-------------------------------------");
 
+        //for loop to access the elements inside the person array and display them
+        for (int index=0; index < persons.length; index+=1){
+            System.out.println(persons[index]);
+        }
 
-
-}
-
-
-
-
-// System.out.println("Array elements are: ");  
-// accessing array elements using the for loop  
-//for (int i=0; i<persons.length; i++)   
-//{  
-//System.out.println(array[i]);  
-//}  
-}  
+        sc.close();
+    }  
 }  
